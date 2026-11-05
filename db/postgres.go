@@ -1,7 +1,6 @@
 package db
 
 import (
-	"fmt"
 	"log"
 	"todo/models"
 
@@ -14,14 +13,8 @@ import (
 //
 // Это для додклучения к Дата База
 func InitPostgres() *gorm.DB {
-	dns := fmt.Sprintf(
-		"host=%s port=%s user=%s password=%s dbname=%s",
-		"localhost",
-		"5432",
-		"postgres",
-		"1111",
-		"ToDoDB",
-	)
+	dns := "postgres://postgres:1111@localhost:5432/todo_db?sslmode=disable"
+
 	//А это чтобы открить форти или Логи я фулл не понел
 	db, err := gorm.Open(postgres.Open(dns), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Info),

@@ -7,3 +7,10 @@ type Todo struct {
 	Description string `json:"description"`
 	Completed   bool   `json:"completed"`
 }
+
+// UpdateTodoInput - поля, которые можно изменить (все необязательные)
+type UpdateTodoInput struct {
+	Title       *string `json:"title"`
+	Description *string `json:"description"`
+	Completed   *bool   `json:"completed"`
+}
