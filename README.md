@@ -44,7 +44,7 @@ A simple REST API for managing a to-do list, built with **Go**, **Gin**, **GORM*
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone <https://github.com/default069/ToDo-List.git>
 cd ToDo
 ```
 
